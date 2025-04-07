@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Закуски</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="news-page">
+    <div class="status-banner">
+        <img src="{{ url_for('static', filename='lion.png') }}" alt="Лев" class="status-logo">
+
+        <span class="status-text">STATUS</span>
+    </div>
+    
+    <nav>
+        <a href="/prices">Цены</a> |
+        <a href="/">Главная</a> |
+        <a href="/snacks">Закуски</a> |
+        <a href="/news">Новости</a>
+    </nav>
+
+    <h1>Меню закусок</h1>
+    <div class="snacks">
+        {% for snack in snacks %}
+            <div class="snack-item">
+                <img src="{{ snack.image }}" alt="{{ snack.name }}">
+                <h3>{{ snack.name }}</h3>
+                <p>{{ snack.price }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Компьютерный клуб</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="status-banner">
+        <img src="{{ url_for('static', filename='lion.png') }}" alt="Лев" class="status-logo">
+        <span class="status-text">STATUS</span>
+    </div>
+    
+    <nav>
+        <a href="/prices">Цены</a> |
+        <a href="/">Главная</a> |
+        <a href="/snacks">Закуски</a> |
+        <a href="/news">Новости</a>
+    </nav>
+    
+    <h1>Выбор места</h1>
+    <div id="seats">
+        {% for i in range(1, 70) %}
+            {% set key = i|string %}
+            {% if key in seats %}
+                {% set seat = seats[key] %}
+            {% else %}
+                {% set seat = {'status': 'free'} %}
+            {% endif %}
+            <div class="seat {{ seat.status }} {% if i >= 61 %}golden{% endif %}" data-seat="{{ i }}">
+                {{ i }}
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="bookingModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Бронирование места <span id="selected-seat-number"></span></h2>
+            <form id="booking-form">
+                <!-- Скрытое поле для номера места -->
+                <input type="hidden" id="modal-seat-id">
+                
+                <input type="text" id="name" name="username" placeholder="Ваше имя" required><br>
+                <input type="text" id="phone" name="phone" placeholder="Ваш номер телефона" required><br> <!-- Номер телефона -->
+                
+                <label>Время (часы):</label>
+                <select id="time" name="duration">
+                    <option value="1">1 час</option>
+                    <option value="2">2 часа</option>
+                    <option value="3">3 часа</option>
+                </select><br><br>
+                
+                <button type="submit">Забронировать</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Пицца",
+        "price": "500₸",
+        "image": "/static/uploads/vid-pizza.jpg"
+    },
+    {
+        "name": "Шоколад Snickers",
+        "price": "300₸",
+        "image": "/static/uploads/R.jpg"
+    },
+    {
+        "name": "Coca-Cola",
+        "price": "400₸",
+        "image": "/static/uploads/R_1.jpg"
+    }
+]

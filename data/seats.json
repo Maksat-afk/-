@@ -1,0 +1,224 @@
+{
+    "1": {
+        "status": "free"
+    },
+    "2": {
+        "status": "free"
+    },
+    "3": {
+        "status": "free"
+    },
+    "4": {
+        "status": "free"
+    },
+    "5": {
+        "status": "free"
+    },
+    "6": {
+        "status": "free"
+    },
+    "7": {
+        "status": "free"
+    },
+    "8": {
+        "status": "free"
+    },
+    "9": {
+        "status": "free"
+    },
+    "10": {
+        "status": "free"
+    },
+    "11": {
+        "status": "free"
+    },
+    "12": {
+        "status": "free"
+    },
+    "13": {
+        "status": "free"
+    },
+    "14": {
+        "status": "free"
+    },
+    "15": {
+        "status": "free"
+    },
+    "16": {
+        "status": "free"
+    },
+    "17": {
+        "status": "free"
+    },
+    "18": {
+        "status": "free"
+    },
+    "19": {
+        "status": "free"
+    },
+    "20": {
+        "status": "free"
+    },
+    "21": {
+        "status": "free"
+    },
+    "22": {
+        "status": "free"
+    },
+    "23": {
+        "status": "free"
+    },
+    "24": {
+        "status": "free"
+    },
+    "25": {
+        "status": "free"
+    },
+    "26": {
+        "status": "free",
+        "name": "max",
+        "pc_number": "",
+        "time": "1"
+    },
+    "27": {
+        "status": "free"
+    },
+    "28": {
+        "status": "free"
+    },
+    "29": {
+        "status": "free"
+    },
+    "30": {
+        "status": "free"
+    },
+    "31": {
+        "status": "free"
+    },
+    "32": {
+        "status": "free"
+    },
+    "33": {
+        "status": "free"
+    },
+    "34": {
+        "status": "free"
+    },
+    "35": {
+        "status": "free"
+    },
+    "36": {
+        "status": "free"
+    },
+    "37": {
+        "status": "free"
+    },
+    "38": {
+        "status": "free"
+    },
+    "39": {
+        "status": "free"
+    },
+    "40": {
+        "status": "free"
+    },
+    "41": {
+        "status": "free",
+        "name": "Maksat",
+        "phone": "77085012056",
+        "time": "2"
+    },
+    "42": {
+        "status": "free"
+    },
+    "43": {
+        "status": "free"
+    },
+    "44": {
+        "status": "free"
+    },
+    "45": {
+        "status": "free"
+    },
+    "46": {
+        "status": "free"
+    },
+    "47": {
+        "status": "free"
+    },
+    "48": {
+        "status": "free"
+    },
+    "49": {
+        "status": "free",
+        "name": "max",
+        "pc_number": "",
+        "time": "2"
+    },
+    "50": {
+        "status": "free"
+    },
+    "51": {
+        "status": "free",
+        "name": "max",
+        "pc_number": "53",
+        "time": "1"
+    },
+    "52": {
+        "status": "free"
+    },
+    "53": {
+        "status": "free"
+    },
+    "54": {
+        "status": "free"
+    },
+    "55": {
+        "status": "free"
+    },
+    "56": {
+        "status": "free"
+    },
+    "57": {
+        "status": "free"
+    },
+    "58": {
+        "status": "free"
+    },
+    "59": {
+        "status": "free"
+    },
+    "60": {
+        "status": "free"
+    },
+    "61": {
+        "status": "occupied",
+        "name": "max",
+        "phone": "77085012076",
+        "time": "1"
+    },
+    "62": {
+        "status": "free"
+    },
+    "63": {
+        "status": "free"
+    },
+    "64": {
+        "status": "free"
+    },
+    "65": {
+        "status": "free"
+    },
+    "66": {
+        "status": "free"
+    },
+    "67": {
+        "status": "free"
+    },
+    "68": {
+        "status": "free"
+    },
+    "69": {
+        "status": "free"
+    }
+}

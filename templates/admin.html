@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Админка</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/prices">Цены</a> |
+        <a href="/">Главная</a> |
+        <a href="/snacks">Закуски</a> |
+        <a href="/news">Новости</a> |
+        <a href="/admin">Админка</a>
+    </nav>
+
+    <div class="admin-container">
+        <h1>Админка</h1>
+
+        <h2>Забронированные места</h2>
+        <button onclick="resetSeats()">Освободить все места</button>
+        <ul class="admin-list">
+            {% for seat_id, seat in seats.items() %}
+                {% if seat.status == "occupied" %}
+                    <li>
+                        Место {{ seat_id }} 
+                        <div>
+                            <strong>Имя:</strong> {{ seat.name }}<br>
+                            <strong>Телефон:</strong> {{ seat.phone }}<br>
+                            <strong>Время брони:</strong> {{ seat.time }} час(ов)
+                        </div>
+                        <button class="admin-btn delete" onclick="freeSeat('{{ seat_id }}')">Освободить</button>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <h2>Закуски</h2>
+        <form id="snack-form" class="admin-form" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Название" required>
+            <input type="text" name="price" placeholder="Цена" required>
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Добавить</button>
+        </form>
+        <ul class="admin-list">
+            {% for snack in snacks %}
+                <li>
+                    <img src="{{ snack.image }}" width="50">
+                    {{ snack.name }} - {{ snack.price }}
+                    <button class="admin-btn delete" onclick="deleteSnack('{{ snack.name }}')">Удалить</button>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <h2>Новости</h2>
+        <form id="news-form" class="admin-form" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="Заголовок" required>
+            <input type="text" name="content" placeholder="Содержание" required>
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Добавить</button>
+        </form>
+        
+        <ul class="admin-list">
+            {% for news_item in news %}
+                <li>
+                    <img src="{{ news_item.image }}" width="50">
+                    <strong>{{ news_item.title }}</strong>: {{ news_item.content }}
+                    <button class="admin-btn delete" onclick="deleteNews('{{ news_item.id }}')">Удалить</button>
+                </li>
+            {% endfor %}        
+        </ul>
+        
+    </div>
+
+    <script src="{{ url_for('static', filename='admin.js') }}"></script>
+</body>
+</html>
